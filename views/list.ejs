@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Action</th>
+        </tr>
+        <% information.forEach(info =>{ %>
+        <tr>
+            <td><%= info.firstname%></td>
+            <td><%= info.lastname%></td>
+            <td><%= info.email%></td>
+            <td><%= info.gender%></td>
+            <td>
+               <a href="/delete/<%= info.id%>">delete</a>
+               <a href="/edit/<%= info.id%>">edit</a>
+            </td>
+        </tr>
+        <% }) %>
+    </table>
+</body>
+</html>
